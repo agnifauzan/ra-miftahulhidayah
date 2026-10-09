@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RA Miftahul Hidayah Cikuya – Islamic Kindergarten</title>
+  <meta name="description" content="RA Miftahul Hidayah Cikuya: pendidikan anak usia dini berbasis nilai-nilai Islam ahlussunnah wal jama'ah." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: '#1F8A5B', dark: '#16423C', light: '#E3F5EC' },
+            accent: { DEFAULT: '#F9C74F', dark: '#8A6A00' },
+            cream: '#FFFBF2'
+          },
+          fontFamily: { sans: ['Nunito', 'Poppins', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+  <style>
+    .ms { font-family: 'Material Symbols Rounded'; font-weight: normal; font-style: normal; line-height: 1; display: inline-block; vertical-align: middle; }
+    .card { background: #fff; border: 1px solid #EEF2EA; border-radius: 1.25rem; box-shadow: 0 6px 24px rgba(22,66,60,.05); transition: transform .2s, box-shadow .2s; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(22,66,60,.10); }
+    .pattern { background-image: radial-gradient(rgba(255,255,255,.12) 1.5px, transparent 1.5px); background-size: 22px 22px; }
+  </style>
+</head>
+
+<body class="bg-cream text-primary-dark font-sans antialiased">
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-primary/10">
+    <nav class="max-w-7xl mx-auto px-4 lg:px-8 h-16 flex items-center justify-between gap-4">
+      <a href="#beranda" class="flex items-center gap-2 shrink-0">
+        <img src="images/logo.png" alt="Logo RA Miftahul Hidayah" class="w-9 h-9 rounded-full bg-primary-light object-cover" />
+        <div class="leading-tight">
+          <p class="font-extrabold text-primary text-base">RA Miftahul Hidayah</p>
+          <p class="text-[11px] text-primary-dark/60">Cikuya - Islamic Kindergarten</p>
+        </div>
+      </a>
+
+      <ul class="hidden lg:flex items-center gap-1 text-sm font-semibold">
+        <li><a href="#beranda" class="px-3 py-1.5 rounded-full bg-primary text-white">Beranda</a></li>
+        <li><a href="profil.html" class="px-3 py-1.5 rounded-full hover:bg-primary-light">Profil</a></li>
+        <li><a href="guru.html" class="px-3 py-1.5 rounded-full hover:bg-primary-light">Guru &amp; Staf</a></li>
+        <li><a href="program.html" class="px-3 py-1.5 rounded-full hover:bg-primary-light">Program</a></li>
+        <li><a href="ppdb.html" class="px-3 py-1.5 rounded-full hover:bg-primary-light">PPDB</a></li>
+        <li><a href="berita.html" class="px-3 py-1.5 rounded-full hover:bg-primary-light">Berita</a></li>
+        <li><a href="galeri.html" class="px-3 py-1.5 rounded-full hover:bg-primary-light">Galeri</a></li>
+        <li><a href="kontak.html" class="px-3 py-1.5 rounded-full hover:bg-primary-light">Kontak</a></li>
+      </ul>
+
+      <div class="flex items-center gap-2">
+        <a href="ppdb.html" class="hidden sm:inline-flex bg-primary text-white text-sm font-bold px-5 py-2 rounded-full hover:bg-primary-dark transition">Daftar Sekarang</a>
+        <a href="#" aria-label="Akun" class="hidden sm:flex w-9 h-9 rounded-full bg-primary text-white items-center justify-center"><span class="ms text-xl">person</span></a>
+        <button id="menuBtn" class="lg:hidden w-10 h-10 rounded-full bg-primary-light flex items-center justify-center" aria-label="Menu">
+          <span class="ms">menu</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-primary/10 bg-white px-4 pb-4">
+      <ul class="flex flex-col py-2 text-sm font-semibold">
+        <li><a href="#beranda" class="block py-2.5">Beranda</a></li>
+        <li><a href="profil.html" class="block py-2.5">Profil</a></li>
+        <li><a href="guru.html" class="block py-2.5">Guru &amp; Staf</a></li>
+        <li><a href="program.html" class="block py-2.5">Program</a></li>
+        <li><a href="ppdb.html" class="block py-2.5">PPDB</a></li>
+        <li><a href="berita.html" class="block py-2.5">Berita</a></li>
+        <li><a href="galeri.html" class="block py-2.5">Galeri</a></li>
+        <li><a href="kontak.html" class="block py-2.5">Kontak</a></li>
+      </ul>
+      <a href="ppdb.html" class="block text-center bg-primary text-white font-bold py-2.5 rounded-full">Daftar Sekarang</a>
+    </div>
+  </header>
+
+  <main id="beranda">
+
+    <!-- ============ HERO ============ -->
+    <section class="relative overflow-hidden">
+      <div class="absolute -right-24 top-10 w-96 h-96 rounded-full bg-accent/20 blur-3xl"></div>
+      <div class="absolute -left-24 bottom-0 w-80 h-80 rounded-full bg-primary/10 blur-3xl"></div>
+
+      <div class="relative max-w-7xl mx-auto px-4 lg:px-8 py-12 lg:py-20 grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <a href="ppdb.html" class="inline-flex items-center gap-1 text-xs font-bold bg-accent/30 text-accent-dark px-3 py-1.5 rounded-full">
+            <span class="ms text-base">chevron_left</span> Penerimaan Peserta Didik Baru (PPDB) TA 2025/2026
+          </a>
+          <h1 class="mt-5 text-4xl lg:text-5xl font-extrabold leading-tight text-primary-dark">
+            Membentuk Generasi Cerdas, Berakhlak, dan Cinta Al-Qur'an
+          </h1>
+          <p class="mt-5 text-primary-dark/75 max-w-xl leading-relaxed">
+            Pendidikan anak usia dini berbasis nilai-nilai Islam ahlussunnah wal jama'ah dengan metode belajar aktif, menyenangkan, dan berpusat pada tumbuh kembang ananda tercinta.
+          </p>
+
+          <div class="mt-5 flex flex-wrap gap-2 text-xs font-semibold">
+            <span class="inline-flex items-center gap-1.5 bg-white border border-primary/10 px-3 py-1.5 rounded-full"><span class="ms text-primary text-base">verified</span> Akreditasi B</span>
+            <span class="inline-flex items-center gap-1.5 bg-white border border-primary/10 px-3 py-1.5 rounded-full"><span class="ms text-primary text-base">menu_book</span> Kurikulum Merdeka &amp; Kemenag</span>
+            <span class="inline-flex items-center gap-1.5 bg-white border border-primary/10 px-3 py-1.5 rounded-full"><span class="ms text-primary text-base">child_care</span> Lingkungan Ramah Anak</span>
+          </div>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="ppdb.html" class="bg-primary text-white font-bold px-7 py-3 rounded-full shadow-lg shadow-primary/25 hover:bg-primary-dark transition">Daftar Sekarang</a>
+            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-white border border-primary/20 font-bold px-7 py-3 rounded-full hover:bg-primary-light transition">
+              <span class="ms text-primary">chat</span> Hubungi Kami
+            </a>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="rounded-[2rem] overflow-hidden border-4 border-white shadow-2xl bg-primary-light aspect-[4/3]">
+            <img src="images/hero.jpg" alt="Anak-anak belajar di RA Miftahul Hidayah" class="w-full h-full object-cover" />
+          </div>
+          <div class="absolute -bottom-4 left-4 bg-white rounded-2xl shadow-lg px-4 py-3 flex items-center gap-3">
+            <span class="ms text-accent bg-accent/20 rounded-full p-1.5">workspace_premium</span>
+            <div class="leading-tight">
+              <p class="text-xs font-extrabold">100% Guru Tersertifikasi</p>
+              <p class="text-[11px] text-primary-dark/60">Lulusan Sarjana PGPAUD &amp; Tahfidz</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="max-w-7xl mx-auto px-4 lg:px-8">
+      <div class="card grid grid-cols-2 lg:grid-cols-4 gap-6 py-8 px-6 text-center">
+        <div><p class="text-4xl font-extrabold text-accent-dark">120+</p><p class="font-bold mt-1">Siswa Aktif</p><p class="text-xs text-primary-dark/60">Terbagi kelas A &amp; B</p></div>
+        <div><p class="text-4xl font-extrabold text-accent-dark">12</p><p class="font-bold mt-1">Ustadzah &amp; Guru</p><p class="text-xs text-primary-dark/60">Sarjana PAUD &amp; Tahfidz</p></div>
+        <div><p class="text-4xl font-extrabold text-accent-dark">15+</p><p class="font-bold mt-1">Tahun Berdiri</p><p class="text-xs text-primary-dark/60">Mengabdi sejak 2009</p></div>
+        <div><p class="text-4xl font-extrabold text-accent-dark">24+</p><p class="font-bold mt-1">Kegiatan Tematik</p><p class="text-xs text-primary-dark/60">Manasik haji, outing, pentas</p></div>
+      </div>
+    </section>
+
+    <!-- ============ KEUNGGULAN ============ -->
+    <section class="max-w-7xl mx-auto px-4 lg:px-8 py-20">
+      <div class="text-center max-w-2xl mx-auto">
+        <span class="inline-block text-[11px] font-bold tracking-wider bg-primary-light text-primary px-3 py-1 rounded-full">MENGAPA MEMILIH KAMI</span>
+        <h2 class="mt-4 text-3xl lg:text-4xl font-extrabold">Keunggulan RA Miftahul Hidayah Cikuya</h2>
+        <p class="mt-4 text-sm text-primary-dark/70">Komitmen kami menghadirkan pondasi akidah dan karakter mulia sejak dini dengan nuansa santun dan ramah anak.</p>
+      </div>
+
+      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <article class="card p-6">
+          <span class="ms w-12 h-12 flex items-center justify-center rounded-2xl bg-primary-light text-primary text-2xl">mosque</span>
+          <h3 class="mt-4 font-extrabold text-lg">Pembiasaan Ibadah</h3>
+          <p class="mt-2 text-sm text-primary-dark/70">Doa harian, hafalan surat pendek, shalat dhuha bersama, dan wudhu mandiri setiap hari.</p>
+          <p class="mt-5 text-xs font-bold text-primary inline-flex items-center gap-1">Pondasi Karakter <span class="ms text-sm">check_circle</span></p>
+        </article>
+        <article class="card p-6">
+          <span class="ms w-12 h-12 flex items-center justify-center rounded-2xl bg-accent/25 text-accent-dark text-2xl">extension</span>
+          <h3 class="mt-4 font-extrabold text-lg">Belajar Sambil Bermain</h3>
+          <p class="mt-2 text-sm text-primary-dark/70">Metode sentra &amp; bermain edukatif yang menstimulasi motorik, kognitif, dan sosial emosional anak tanpa paksaan.</p>
+          <p class="mt-5 text-xs font-bold text-primary inline-flex items-center gap-1">Metode Sentra <span class="ms text-sm">check_circle</span></p>
+        </article>
+        <article class="card p-6">
+          <span class="ms w-12 h-12 flex items-center justify-center rounded-2xl bg-primary-light text-primary text-2xl">volunteer_activism</span>
+          <h3 class="mt-4 font-extrabold text-lg">Guru Berpengalaman</h3>
+          <p class="mt-2 text-sm text-primary-dark/70">Pendidik berlatar belakang PGPAUD yang sabar, telaten, berakhlak mulia, dan memahami psikologi anak usia dini.</p>
+          <p class="mt-5 text-xs font-bold text-primary inline-flex items-center gap-1">Penuh Kasih <span class="ms text-sm">check_circle</span></p>
+        </article>
+        <article class="card p-6">
+          <span class="ms w-12 h-12 flex items-center justify-center rounded-2xl bg-accent/25 text-accent-dark text-2xl">shield_person</span>
+          <h3 class="mt-4 font-extrabold text-lg">Lingkungan Aman &amp; Nyaman</h3>
+          <p class="mt-2 text-sm text-primary-dark/70">Ruang kelas ber-AC, area bermain outdoor berstandar aman, pantauan CCTV, dan sanitasi bersih ramah balita.</p>
+          <p class="mt-5 text-xs font-bold text-primary inline-flex items-center gap-1">Standar Bersih <span class="ms text-sm">check_circle</span></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ TENTANG ============ -->
+    <section class="max-w-7xl mx-auto px-4 lg:px-8 pb-20 grid lg:grid-cols-2 gap-12 items-center">
+      <div class="relative">
+        <div class="rounded-[2rem] overflow-hidden border-4 border-white shadow-xl bg-primary-light aspect-[4/5] max-w-md mx-auto lg:mx-0">
+          <img src="images/tentang.jpg" alt="Guru dan anak-anak belajar huruf" class="w-full h-full object-cover" />
+        </div>
+        <div class="absolute bottom-4 left-6 bg-primary text-white rounded-2xl px-5 py-3 flex items-center gap-3 shadow-lg">
+          <span class="ms">favorite</span>
+          <div class="leading-tight"><p class="font-extrabold">Penuh Kasih</p><p class="text-[11px] opacity-80">Ramah Tumbuh Kembang</p></div>
+        </div>
+      </div>
+
+      <div>
+        <span class="inline-block text-[11px] font-bold tracking-wider bg-primary-light text-primary px-3 py-1 rounded-full">TENTANG RA MIFTAHUL HIDAYAH CIKUYA</span>
+        <h2 class="mt-4 text-3xl lg:text-4xl font-extrabold leading-tight">Rumah Kedua yang Menumbuhkan Fitrah Keislaman dan Potensi Si Kecil</h2>
+
+        <div class="mt-8 space-y-4">
+          <div class="card p-5 flex gap-4">
+            <span class="ms w-10 h-10 shrink-0 flex items-center justify-center rounded-xl bg-primary-light text-primary">flag</span>
+            <div><h3 class="font-extrabold">Visi Pendidikan Kami</h3><p class="text-sm text-primary-dark/70 mt-1">Mewujudkan tunas bangsa yang beriman, bertakwa, kreatif, cerdas, dan mandiri dengan landasan Qurani.</p></div>
+          </div>
+          <div class="card p-5 flex gap-4">
+            <span class="ms w-10 h-10 shrink-0 flex items-center justify-center rounded-xl bg-accent/25 text-accent-dark">diversity_1</span>
+            <div><h3 class="font-extrabold">Pendekatan Penuh Kelembutan</h3><p class="text-sm text-primary-dark/70 mt-1">Menerapkan compassionate learning tanpa hukuman fisik, mengedepankan apresiasi dan dialog bersahabat.</p></div>
+          </div>
+        </div>
+
+        <a href="profil.html" class="mt-6 inline-flex items-center gap-1 font-bold text-primary hover:underline">Selengkapnya Tentang Lembaga Kami <span class="ms text-lg">arrow_forward</span></a>
+      </div>
+    </section>
+
+    <!-- ============ PROGRAM ============ -->
+    <section class="bg-white/60 py-20">
+      <div class="max-w-7xl mx-auto px-4 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto">
+          <span class="inline-block text-[11px] font-bold tracking-wider bg-primary-light text-primary px-3 py-1 rounded-full">PROGRAM UNGGULAN</span>
+          <h2 class="mt-4 text-3xl lg:text-4xl font-extrabold">Kurikulum &amp; Program Belajar Berkualitas</h2>
+          <p class="mt-4 text-sm text-primary-dark/70">Menyajikan pembelajaran seimbang antara ilmu agama, kesiapan calistung dini, serta kecerdasan kinestetik.</p>
+        </div>
+
+        <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <article class="card p-6">
+            <div class="flex items-center justify-between">
+              <span class="ms w-12 h-12 flex items-center justify-center rounded-2xl bg-primary-light text-primary text-2xl">auto_stories</span>
+              <span class="text-[11px] font-bold text-primary">Tahfidz Cilik</span>
+            </div>
+            <h3 class="mt-4 font-extrabold text-lg">Hafalan Surat Pendek</h3>
+            <p class="mt-2 text-sm text-primary-dark/70">Target hafalan Juz 30 (An-Nas s.d. Ad-Dhuha) dengan metode talaqqi yang ceria, mudah diingat, dan menyenangkan bagi anak.</p>
+            <div class="mt-5 pt-4 border-t border-primary/10 flex justify-between text-xs font-bold"><span>Setiap Hari</span><span class="text-accent-dark">Talaqqi 15 Menit</span></div>
+          </article>
+          <article class="card p-6">
+            <div class="flex items-center justify-between">
+              <span class="ms w-12 h-12 flex items-center justify-center rounded-2xl bg-accent/25 text-accent-dark text-2xl">translate</span>
+              <span class="text-[11px] font-bold text-primary">Literasi Al-Qur'an</span>
+            </div>
+            <h3 class="mt-4 font-extrabold text-lg">Iqro &amp; Huruf Hijaiyah</h3>
+            <p class="mt-2 text-sm text-primary-dark/70">Bimbingan membaca Al-Qur'an secara privat intensif sesuai tahapan kemampuan masing-masing anak tanpa membuat jenuh.</p>
+            <div class="mt-5 pt-4 border-t border-primary/10 flex justify-between text-xs font-bold"><span>Bimbingan Personal</span><span class="text-accent-dark">Buku Iqro 1-6</span></div>
+          </article>
+          <article class="card p-6">
+            <div class="flex items-center justify-between">
+              <span class="ms w-12 h-12 flex items-center justify-center rounded-2xl bg-primary-light text-primary text-2xl">self_improvement</span>
+              <span class="text-[11px] font-bold text-primary">Amaliyah Rutin</span>
+            </div>
+            <h3 class="mt-4 font-extrabold text-lg">Praktik Ibadah &amp; Doa Harian</h3>
+            <p class="mt-2 text-sm text-primary-dark/70">Praktik manasik haji anak, shalat fardhu &amp; dhuha, doa makan, tidur, dan adab keseharian kepada orang tua dan sesama.</p>
+            <div class="mt-5 pt-4 border-t border-primary/10 flex justify-between text-xs font-bold"><span>Aplikasi Nyata</span><span class="text-accent-dark">Adab &amp; Karakter</span></div>
+          </article>
+          <article class="card p-6">
+            <div class="flex items-center justify-between">
+              <span class="ms w-12 h-12 flex items-center justify-center rounded-2xl bg-accent/25 text-accent-dark text-2xl">palette</span>
+              <span class="text-[11px] font-bold text-primary">Eksplorasi Motorik</span>
+            </div>
+            <h3 class="mt-4 font-extrabold text-lg">Seni &amp; Kreativitas Anak</h3>
+            <p class="mt-2 text-sm text-primary-dark/70">Melukis, sensory play, bercerita kisah Nabi (storytelling), gerak &amp; lagu islami, serta panggung pentas seni tahunan santri.</p>
+            <div class="mt-5 pt-4 border-t border-primary/10 flex justify-between text-xs font-bold"><span>Sensori &amp; Imajinasi</span><span class="text-accent-dark">Karya Mandiri</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BERITA ============ -->
+    <section class="max-w-7xl mx-auto px-4 lg:px-8 py-20">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <span class="inline-block text-[11px] font-bold tracking-wider bg-primary-light text-primary px-3 py-1 rounded-full">KABAR MADRASAH</span>
+          <h2 class="mt-3 text-3xl lg:text-4xl font-extrabold">Berita &amp; Kegiatan Terbaru</h2>
+        </div>
+        <a href="berita.html" class="text-sm font-bold text-primary hover:underline">Lihat Semua Berita &rarr;</a>
+      </div>
+
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <article class="card overflow-hidden">
+          <div class="relative aspect-[16/10] bg-primary-light">
+            <img src="images/berita-1.jpg" alt="Manasik haji cilik" class="w-full h-full object-cover" />
+            <span class="absolute top-3 left-3 text-[11px] font-bold bg-primary text-white px-3 py-1 rounded-full">Kegiatan</span>
+          </div>
+          <div class="p-5">
+            <p class="text-xs text-primary-dark/60">12 Mei 2025</p>
+            <h3 class="mt-2 font-extrabold text-lg leading-snug">Keceriaan Santri RA Miftahul Hidayah dalam Peragaan Manasik...</h3>
+            <p class="mt-2 text-sm text-primary-dark/70">Santriwan dan santriwati antusias mengenakan pakaian ihram dan mempraktikkan rukun haji dengan penuh kegembiraan.</p>
+            <a href="berita-detail.html" class="mt-4 inline-block text-sm font-bold text-primary">Baca Selengkapnya &rarr;</a>
+          </div>
+        </article>
+
+        <article class="card overflow-hidden">
+          <div class="relative aspect-[16/10] bg-primary-light">
+            <img src="images/berita-2.jpg" alt="Outing class taman edukasi" class="w-full h-full object-cover" />
+            <span class="absolute top-3 left-3 text-[11px] font-bold bg-accent text-primary-dark px-3 py-1 rounded-full">Edukasi</span>
+          </div>
+          <div class="p-5">
+            <p class="text-xs text-primary-dark/60">28 April 2025</p>
+            <h3 class="mt-2 font-extrabold text-lg leading-snug">Outing Class ke Taman Edukasi: Mengenal Ciptaan Allah &amp; Alam...</h3>
+            <p class="mt-2 text-sm text-primary-dark/70">Melatih motorik dan rasa syukur anak dengan menyentuh alam, menanam bibit, dan berinteraksi...</p>
+            <a href="berita-detail.html" class="mt-4 inline-block text-sm font-bold text-primary">Baca Selengkapnya &rarr;</a>
+          </div>
+        </article>
+
+        <article class="card overflow-hidden">
+          <div class="relative aspect-[16/10] bg-primary-light">
+            <img src="images/berita-3.jpg" alt="Seminar parenting" class="w-full h-full object-cover" />
+            <span class="absolute top-3 left-3 text-[11px] font-bold bg-primary text-white px-3 py-1 rounded-full">Pengumuman</span>
+          </div>
+          <div class="p-5">
+            <p class="text-xs text-primary-dark/60">15 April 2025</p>
+            <h3 class="mt-2 font-extrabold text-lg leading-snug">Seminar Parenting: Mendidik Anak Berkarakter Qur'ani di Era Digital</h3>
+            <p class="mt-2 text-sm text-primary-dark/70">Pertemuan wali santri bersama psikolog anak untuk memperkuat sinergi pengasuhan di rumah dan...</p>
+            <a href="berita-detail.html" class="mt-4 inline-block text-sm font-bold text-primary">Baca Selengkapnya &rarr;</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONI ============ -->
+    <section class="bg-white/60 py-20">
+      <div class="max-w-7xl mx-auto px-4 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto">
+          <span class="inline-block text-[11px] font-bold tracking-wider bg-primary-light text-primary px-3 py-1 rounded-full">KATA ORANG TUA</span>
+          <h2 class="mt-4 text-3xl lg:text-4xl font-extrabold">Apa Kata Ayah &amp; Bunda Tentang Kami</h2>
+          <p class="mt-4 text-sm text-primary-dark/70">Kepercayaan dan kebahagiaan para orang tua adalah amanah terbaik yang selalu kami jaga.</p>
+        </div>
+
+        <div class="mt-12 grid md:grid-cols-3 gap-6">
+          <figure class="card p-6 flex flex-col">
+            <div class="text-accent flex"><span class="ms">star</span><span class="ms">star</span><span class="ms">star</span><span class="ms">star</span><span class="ms">star</span></div>
+            <blockquote class="mt-4 text-sm italic text-primary-dark/80 flex-1">"Alhamdulillah putri saya baru 1 semester sudah hafal belasan surat pendek dan terbiasa membaca doa makan sendiri di rumah. Gurunya sangat sabar dan penyayang."</blockquote>
+            <figcaption class="mt-5 flex items-center gap-3">
+              <span class="w-10 h-10 rounded-full bg-primary-light text-primary font-extrabold text-sm flex items-center justify-center">SR</span>
+              <div class="leading-tight"><p class="text-sm font-extrabold">Bunda Siti Rahmawati</p><p class="text-xs text-primary-dark/60">Ibunda dari Aisyah, Kelas B</p></div>
+            </figcaption>
+          </figure>
+          <figure class="card p-6 flex flex-col">
+            <div class="text-accent flex"><span class="ms">star</span><span class="ms">star</span><span class="ms">star</span><span class="ms">star</span><span class="ms">star</span></div>
+            <blockquote class="mt-4 text-sm italic text-primary-dark/80 flex-1">"Fasilitasnya sangat bersih dan aman. Anak saya yang tadinya pemalu sekarang jadi aktif dan percaya diri. Setiap pagi selalu semangat berangkat ke sekolah!"</blockquote>
+            <figcaption class="mt-5 flex items-center gap-3">
+              <span class="w-10 h-10 rounded-full bg-accent/30 text-accent-dark font-extrabold text-sm flex items-center justify-center">DP</span>
+              <div class="leading-tight"><p class="text-sm font-extrabold">Ayah Dedi Prasetyo</p><p class="text-xs text-primary-dark/60">Ayahanda dari Fatih, Kelas A</p></div>
+            </figcaption>
+          </figure>
+          <figure class="card p-6 flex flex-col">
+            <div class="text-accent flex"><span class="ms">star</span><span class="ms">star</span><span class="ms">star</span><span class="ms">star</span><span class="ms">star</span></div>
+            <blockquote class="mt-4 text-sm italic text-primary-dark/80 flex-1">"Pilihan terbaik untuk sekolah TK Islam di Cikuya. Komunikasi antara guru dan wali santri sangat terbuka, laporan perkembangan anak rutin dan transparan."</blockquote>
+            <figcaption class="mt-5 flex items-center gap-3">
+              <span class="w-10 h-10 rounded-full bg-primary-light text-primary font-extrabold text-sm flex items-center justify-center">NH</span>
+              <div class="leading-tight"><p class="text-sm font-extrabold">Bunda Nurul Hidayah</p><p class="text-xs text-primary-dark/60">Ibunda dari Rayyan, Kelas B</p></div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BANNER PPDB ============ -->
+    <section class="max-w-7xl mx-auto px-4 lg:px-8 py-20">
+      <div class="relative overflow-hidden rounded-[2rem] bg-primary text-white text-center px-6 py-14 lg:py-16 pattern">
+        <span class="inline-block text-[11px] font-bold tracking-wider bg-accent text-primary-dark px-3 py-1 rounded-full">GELOMBANG 1 KINI DIBUKA</span>
+        <h2 class="mt-5 text-3xl lg:text-5xl font-extrabold leading-tight">Penerimaan Peserta Didik Baru<br class="hidden sm:block" /> (PPDB) Telah Dibuka!</h2>
+        <p class="mt-5 max-w-2xl mx-auto text-white/85">Daftarkan putra-putri tercinta sekarang untuk Tahun Ajaran 2025/2026. Kuota terbatas 60 santri untuk menjaga rasio guru dan murid yang ideal demi perhatian optimal.</p>
+        <a href="ppdb.html" class="mt-8 inline-block bg-accent text-primary-dark font-extrabold px-8 py-3.5 rounded-full shadow-lg hover:brightness-95 transition">Daftar Sekarang (Formulir Online)</a>
+        <p class="mt-6 text-xs text-white/80">Atau unduh <a href="#" class="underline">Brosur PPDB &amp; Rincian Biaya (PDF)</a> • Konsultasi langsung via WhatsApp: <a href="https://wa.me/6281234567890" class="font-bold text-accent">0812-3456-7890</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-white border-t border-primary/10">
+    <div class="max-w-7xl mx-auto px-4 lg:px-8 py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10 text-sm">
+      <div>
+        <a href="#beranda" class="flex items-center gap-2">
+          <img src="images/logo.png" alt="Logo" class="w-9 h-9 rounded-full bg-primary-light object-cover" />
+          <span class="font-extrabold text-primary text-lg">RA Miftahul Hidayah</span>
+        </a>
+        <p class="mt-4 text-primary-dark/70 leading-relaxed">Menumbuhkan generasi Qurani yang berakhlak mulia, cerdas, kreatif, dan mandiri dengan suasana belajar ceria bernuansa Islami di Cikuya.</p>
+        <p class="mt-4 text-xs italic bg-accent/20 rounded-xl px-4 py-3">"Mendidik dengan Hati, Menanamkan Iman Sejak Dini"</p>
+      </div>
+
+      <div>
+        <h4 class="font-extrabold text-primary text-base">Tautan Cepat</h4>
+        <ul class="mt-4 space-y-2.5 text-primary-dark/75">
+          <li><a href="#beranda" class="hover:text-primary">&rarr; Beranda</a></li>
+          <li><a href="profil.html" class="hover:text-primary">&rarr; Profil Lembaga</a></li>
+          <li><a href="guru.html" class="hover:text-primary">&rarr; Tenaga Pendidik</a></li>
+          <li><a href="program.html" class="hover:text-primary">&rarr; Program Belajar</a></li>
+          <li><a href="ppdb.html" class="hover:text-primary">&rarr; Informasi PPDB</a></li>
+          <li><a href="berita.html" class="hover:text-primary">&rarr; Berita &amp; Artikel</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-extrabold text-primary text-base">Informasi Kontak</h4>
+        <ul class="mt-4 space-y-3 text-primary-dark/75">
+          <li class="flex gap-2"><span class="ms text-primary text-lg">location_on</span> Jl. Raya Cikuya No. 12, Desa Cikuya, Kec. Solear, Kab. Tangerang, Banten</li>
+          <li class="flex gap-2"><span class="ms text-primary text-lg">call</span> 0812-3456-7890</li>
+          <li class="flex gap-2"><span class="ms text-primary text-lg">mail</span> info@ramiftahulhidayah.sch.id</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-extrabold text-primary text-base">Jam Operasional</h4>
+        <div class="mt-4 bg-accent/20 rounded-xl px-4 py-3 text-xs space-y-1.5">
+          <div class="flex justify-between"><span>Senin - Jumat</span><span class="font-bold">07.30 - 11.30 WIB</span></div>
+          <div class="flex justify-between"><span>Sabtu - Ahad</span><span class="font-bold text-red-600">Libur</span></div>
+        </div>
+        <p class="mt-5 text-xs font-bold">Ikuti Media Sosial</p>
+        <div class="mt-2 flex gap-2">
+          <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full bg-primary-light text-primary flex items-center justify-center hover:bg-primary hover:text-white transition"><span class="ms text-lg">photo_camera</span></a>
+          <a href="#" aria-label="Website" class="w-9 h-9 rounded-full bg-primary-light text-primary flex items-center justify-center hover:bg-primary hover:text-white transition"><span class="ms text-lg">public</span></a>
+          <a href="#" aria-label="YouTube" class="w-9 h-9 rounded-full bg-primary-light text-primary flex items-center justify-center hover:bg-primary hover:text-white transition"><span class="ms text-lg">smart_display</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-primary/10">
+      <div class="max-w-7xl mx-auto px-4 lg:px-8 py-5 flex flex-wrap justify-between gap-2 text-xs text-primary-dark/70">
+        <p>Hak Cipta © 2025 RA Miftahul Hidayah Cikuya. Semua Hak Dilindungi.</p>
+        <p class="font-bold text-primary">Taman Kanak-Kanak Islam Terpadu Solear Tangerang</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" aria-label="Chat WhatsApp"
+     class="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center shadow-xl shadow-primary/30 hover:scale-105 transition">
+    <span class="ms text-2xl">chat</span>
+  </a>
+
+  <script>
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+  </script>
+</body>
+</html>
